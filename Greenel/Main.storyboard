@@ -21,6 +21,9 @@
                         <viewLayoutGuide key="safeArea" id="zZS-G3-oDo"/>
                     </view>
                     <navigationItem key="navigationItem" id="0Oe-Y9-wAI"/>
+                    <connections>
+                        <segue destination="HUx-jd-GQ9" kind="showDetail" identifier="ShowDetails" id="htH-QR-ia7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HpS-jC-5E0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -37,6 +40,9 @@
                         <viewLayoutGuide key="safeArea" id="NRR-Yl-7RR"/>
                     </view>
                     <navigationItem key="navigationItem" id="p0v-dW-xhg"/>
+                    <connections>
+                        <segue destination="HUx-jd-GQ9" kind="showDetail" identifier="ShowDetails" id="4zT-Sl-l3b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePz-mb-jXp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -95,5 +101,23 @@
             </objects>
             <point key="canvasLocation" x="1661.5999999999999" y="926.98650674662679"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="7j2-Qe-5EX">
+            <objects>
+                <viewController id="HUx-jd-GQ9" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ajQ-cU-3Lr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sjb-Gc-lkJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lAk-wb-Mx6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="2865"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4zT-Sl-l3b"/>
+    </inferredMetricsTieBreakers>
 </document>

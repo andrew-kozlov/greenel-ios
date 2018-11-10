@@ -12,6 +12,12 @@ class AdminViewController: UITableViewController {
     
     var records: [Record] = []
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        updateRecords()
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         

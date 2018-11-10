@@ -30,9 +30,10 @@
         <scene sceneID="cx0-ev-6X3">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G8t-4A-nJB" userLabel="Admin Navigation" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Admin" id="sks-CU-c3Y"/>
+                    <tabBarItem key="tabBarItem" title="Admin" image="Admin" id="sks-CU-c3Y"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8xv-KX-aiu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -48,9 +49,10 @@
         <scene sceneID="Qin-cC-sE6">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bn9-GX-jKa" userLabel="Owner Navigation" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Owner" id="Dft-PI-Z9g"/>
+                    <tabBarItem key="tabBarItem" title="Owner" image="Owner" id="Dft-PI-Z9g"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="LTQ-d8-FIj">
+                        <rect key="frame" x="0.0" y="20" width="375" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -259,6 +261,10 @@
             <point key="canvasLocation" x="3271" y="1950"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Admin" width="30" height="30"/>
+        <image name="Owner" width="30" height="30"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="prp-Wr-C2N"/>
     </inferredMetricsTieBreakers>

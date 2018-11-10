@@ -58,6 +58,12 @@ class AdminViewController: UITableViewController {
         performSegue(withIdentifier: "ShowRecord", sender: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow, let recordViewController = segue.destination as? RecordViewController {
+            recordViewController.record = records[indexPath.row]
+        }
+    }
+    
     @IBAction private func emit() {
         Service.shared.emit()
     }

@@ -32,7 +32,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="G8t-4A-nJB" userLabel="Admin Navigation" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Admin" id="sks-CU-c3Y"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8xv-KX-aiu">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="8xv-KX-aiu">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -62,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="1661.5999999999999" y="926.98650674662679"/>
         </scene>
-        <!--Admin View Controller-->
+        <!--Admin-->
         <scene sceneID="O5O-eC-gE2">
             <objects>
                 <tableViewController id="K8g-Za-hWX" customClass="AdminViewController" customModule="Greenel" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,12 +71,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordCell" rowHeight="100" id="MSU-cd-a85">
-                                <rect key="frame" x="0.0" y="55.5" width="375" height="100"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RecordCell" textLabel="rre-XZ-wiy" detailTextLabel="O43-Ge-Ne1" rowHeight="68" style="IBUITableViewCellStyleSubtitle" id="MSU-cd-a85">
+                                <rect key="frame" x="0.0" y="55.5" width="375" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="MSU-cd-a85" id="e8y-t6-O2j">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rre-XZ-wiy">
+                                            <rect key="frame" x="16" y="14" width="33.5" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="O43-Ge-Ne1">
+                                            <rect key="frame" x="16" y="37.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -85,9 +101,20 @@
                             <outlet property="delegate" destination="K8g-Za-hWX" id="lAT-4k-Emr"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="35l-WO-yqe"/>
+                    <navigationItem key="navigationItem" title="Admin" largeTitleDisplayMode="always" id="35l-WO-yqe">
+                        <barButtonItem key="leftBarButtonItem" title="Emit" id="yhk-zt-vON">
+                            <connections>
+                                <action selector="emit" destination="K8g-Za-hWX" id="jCi-a6-2g5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Revoke" id="No2-5f-bF7">
+                            <connections>
+                                <action selector="revoke" destination="K8g-Za-hWX" id="D9c-Pc-Zse"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <segue destination="kF0-jN-5Sg" kind="showDetail" identifier="ShowRecord" id="It6-0n-MRu"/>
+                        <segue destination="kF0-jN-5Sg" kind="show" identifier="ShowRecord" id="It6-0n-MRu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJx-Mf-cX8" userLabel="First Responder" sceneMemberID="firstResponder"/>

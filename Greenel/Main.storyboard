@@ -160,7 +160,15 @@
                             <outlet property="delegate" destination="Gm5-wW-0iX" id="RDF-iU-kum"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Owner" largeTitleDisplayMode="always" id="2rC-Wz-Ui2"/>
+                    <navigationItem key="navigationItem" title="Owner" largeTitleDisplayMode="always" id="2rC-Wz-Ui2">
+                        <barButtonItem key="rightBarButtonItem" title="Wallets" id="iwP-b1-oh6">
+                            <connections>
+                                <segue destination="m7y-je-Reh" kind="popoverPresentation" identifier="ShowWallets" popoverAnchorBarButtonItem="iwP-b1-oh6" id="KOB-AB-mV7">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="kF0-jN-5Sg" kind="show" identifier="ShowRecord" id="prp-Wr-C2N"/>
                     </connections>
@@ -212,8 +220,36 @@
             </objects>
             <point key="canvasLocation" x="670" y="2962"/>
         </scene>
+        <!--Table View Controller-->
+        <scene sceneID="dU1-Lh-2h4">
+            <objects>
+                <tableViewController id="m7y-je-Reh" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="30a-vQ-0Al">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="71S-HN-WH3">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="71S-HN-WH3" id="9bh-0t-xyC">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="m7y-je-Reh" id="2V0-1Z-e9p"/>
+                            <outlet property="delegate" destination="m7y-je-Reh" id="87R-oo-ZbU"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lpH-1I-AdK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3271" y="1950"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="It6-0n-MRu"/>
+        <segue reference="prp-Wr-C2N"/>
     </inferredMetricsTieBreakers>
 </document>

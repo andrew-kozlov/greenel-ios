@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OwnerViewController: UITableViewController {
+class OwnerViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
     
     var owner: String = ""
     var records: [Record] = []
@@ -75,6 +75,15 @@ class OwnerViewController: UITableViewController {
         if let indexPath = tableView.indexPathForSelectedRow, let recordViewController = segue.destination as? RecordViewController {
             recordViewController.record = records[indexPath.row]
         }
+        
+        if segue.identifier == "ShowWallets" {
+            segue.destination.modalPresentationStyle = .popover
+            segue.destination.popoverPresentationController?.delegate = self
+        }
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return .none
     }
     
 }

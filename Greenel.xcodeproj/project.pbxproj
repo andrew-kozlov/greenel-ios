@@ -21,6 +21,7 @@
 		71633350219712DD00916E64 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71633343219712D100916E64 /* CodableAlamofire.framework */; };
 		71633351219712DD00916E64 /* CodableAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71633343219712D100916E64 /* CodableAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		716333AA219719AC00916E64 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 7163339C219719AC00916E64 /* list.json */; };
+		716333AC21971CD600916E64 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 716333AB21971CD600916E64 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +169,7 @@
 		7163331921970EE600916E64 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		71633337219712D000916E64 /* CodableAlamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CodableAlamofire.xcodeproj; path = CodableAlamofire/CodableAlamofire.xcodeproj; sourceTree = "<group>"; };
 		7163339C219719AC00916E64 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
+		716333AB21971CD600916E64 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +225,7 @@
 				71633300219646E500916E64 /* LaunchScreen.storyboard */,
 				716332FE219646E500916E64 /* Assets.xcassets */,
 				71633303219646E500916E64 /* Info.plist */,
+				716333AB21971CD600916E64 /* Settings.bundle */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -436,6 +439,7 @@
 			files = (
 				71633302219646E500916E64 /* LaunchScreen.storyboard in Resources */,
 				716333AA219719AC00916E64 /* list.json in Resources */,
+				716333AC21971CD600916E64 /* Settings.bundle in Resources */,
 				716332FF219646E500916E64 /* Assets.xcassets in Resources */,
 				7163330D21964FE300916E64 /* Main.storyboard in Resources */,
 			);

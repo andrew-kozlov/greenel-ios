@@ -10,33 +10,46 @@ import UIKit
 
 class OwnerViewController: UITableViewController {
     
+    var owner: String = ""
     var records: [Record] = []
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        updateRecords()
+        updateData()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(updateData), name: Service.recordsUpdated, object: nil)
+        UserDefaults.standard.addObserver(self, forKeyPath: "Owner", options: NSKeyValueObservingOptions.new, context: nil)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(updateRecords), name: Service.recordsUpdated, object: nil)
+    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        updateData()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         
         NotificationCenter.default.removeObserver(self)
+        UserDefaults.standard.removeObserver(self, forKeyPath: "Owner")
     }
     
-    @objc private func updateRecords() {
-        records = Service.shared.records
+    @objc private func updateData() {
+        owner = UserDefaults.standard.string(forKey: "Owner") ?? ""
+        
+        let match = owner
+        
+        records = Service.shared.records.filter {
+            $0.ownerName.contains(match)
+                || $0.ownerAddress.contains(match)
+                || $0.ownerOGRN.contains(match)
+        }
         
         updateView()
     }
     
     private func updateView() {
+        navigationItem.title = owner
+        
         tableView.reloadData()
     }
     

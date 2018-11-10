@@ -20,6 +20,7 @@
 		7163333321970F7A00916E64 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 7163332521970EE600916E64 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		71633350219712DD00916E64 /* CodableAlamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 71633343219712D100916E64 /* CodableAlamofire.framework */; };
 		71633351219712DD00916E64 /* CodableAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71633343219712D100916E64 /* CodableAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		716333AA219719AC00916E64 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 7163339C219719AC00916E64 /* list.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -166,6 +167,7 @@
 		716333172196F6F100916E64 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		7163331921970EE600916E64 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		71633337219712D000916E64 /* CodableAlamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CodableAlamofire.xcodeproj; path = CodableAlamofire/CodableAlamofire.xcodeproj; sourceTree = "<group>"; };
+		7163339C219719AC00916E64 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +212,7 @@
 				716333112196E8BB00916E64 /* OwnerViewController.swift */,
 				716333132196E9A500916E64 /* RecordViewController.swift */,
 				716333092196475400916E64 /* Resources */,
+				7163339B219719AC00916E64 /* MockData */,
 			);
 			path = Greenel;
 			sourceTree = "<group>";
@@ -250,6 +253,14 @@
 				7163334F219712D100916E64 /* CodableAlamofireTests-macOS.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		7163339B219719AC00916E64 /* MockData */ = {
+			isa = PBXGroup;
+			children = (
+				7163339C219719AC00916E64 /* list.json */,
+			);
+			path = MockData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71633302219646E500916E64 /* LaunchScreen.storyboard in Resources */,
+				716333AA219719AC00916E64 /* list.json in Resources */,
 				716332FF219646E500916E64 /* Assets.xcassets in Resources */,
 				7163330D21964FE300916E64 /* Main.storyboard in Resources */,
 			);

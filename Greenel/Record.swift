@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Record {
+struct Record: Decodable {
     
     let identifier: String
     let creationDate: Date
@@ -22,5 +22,37 @@ struct Record {
     let lifeTime: Int
     let type: String
     let wallet: String
+    
+    private enum CodingKeys: String, CodingKey {
+        case identifier = "id"
+        case creationDate = "createdDate"
+        case ownerName = "ownerName"
+        case ownerOGRN = "ogrn"
+        case ownerAddress = "address"
+        case volume = "volume"
+        case period = "period"
+        case emissionVolume = "co2Volume"
+        case certificateNumber = "sertNumber"
+        case lifeTime = "lifeTime"
+        case type = "type"
+        case wallet = "wallet"
+    }
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        identifier = try container.decodeIfPresent(String.self, forKey: .identifier) ?? ""
+        creationDate = try container.decodeIfPresent(Date.self, forKey: .creationDate) ?? Date()
+        ownerName = try container.decodeIfPresent(String.self, forKey: .ownerName) ?? ""
+        ownerOGRN = try container.decodeIfPresent(String.self, forKey: .ownerOGRN) ?? ""
+        ownerAddress = try container.decodeIfPresent(String.self, forKey: .ownerAddress) ?? ""
+        volume = try container.decodeIfPresent(Float.self, forKey: .volume) ?? 0.0
+        period = try container.decodeIfPresent(String.self, forKey: .period) ?? ""
+        emissionVolume = try container.decodeIfPresent(Float.self, forKey: .emissionVolume) ?? 0.0
+        certificateNumber = try container.decodeIfPresent(String.self, forKey: .certificateNumber) ?? ""
+        lifeTime = try container.decodeIfPresent(Int.self, forKey: .lifeTime) ?? 0
+        type = try container.decodeIfPresent(String.self, forKey: .type) ?? ""
+        wallet = try container.decodeIfPresent(String.self, forKey: .wallet) ?? ""
+    }
     
 }

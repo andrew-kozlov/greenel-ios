@@ -1,0 +1,58 @@
+[
+    {
+        "id": "1",
+        "createdDate": "2008-09-15T15:53:00+05:00",
+        "ownerName": "Owner 123456345634",
+        "ogrn": "OGRN 1",
+        "address": "Address 1",
+        "volume": 123.45,
+        "period": "Period 1",
+        "co2Volume": 0.123,
+        "sertNumber": "1234567890",
+        "lifeTime": 5,
+        "type": "A",
+        "wallet": "01234567890"
+    },
+    {
+        "id": "2",
+        "createdDate": "2008-09-15T15:53:00+05:00",
+        "ownerName": "Owner 2",
+        "ogrn": "OGRN 2",
+        "address": "Address 2",
+        "volume": 123.45,
+        "period": "Period 2",
+        "co2Volume": 0.123,
+        "sertNumber": "1234567890",
+        "lifeTime": 5,
+        "type": "B",
+        "wallet": "01234567890"
+    },
+    {
+        "id": "3",
+        "createdDate": "2008-09-15T15:53:00+05:00",
+        "ownerName": "Owner 1",
+        "ogrn": "OGRN 1",
+        "address": "Address 1",
+        "volume": 12.345,
+        "period": "Period 3",
+        "co2Volume": 0.123,
+        "sertNumber": "1234567890",
+        "lifeTime": 50,
+        "type": "A",
+        "wallet": "01234567890"
+    },
+    {
+        "id": "4",
+        "createdDate": "2008-09-15T15:53:00+05:00",
+        "ownerName": "Owner 1123412341",
+        "ogrn": "OGRN 1213523456246453",
+        "address": "Address 1456435634563",
+        "volume": 122345.345,
+        "period": "Period 33657457456",
+        "co2Volume": 0.123,
+        "sertNumber": "DFDGGFDGD1234567890",
+        "lifeTime": 500,
+        "type": "AAA",
+        "wallet": "01234567890"
+    }
+]

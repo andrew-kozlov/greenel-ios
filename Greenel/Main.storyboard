@@ -10,25 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="aRX-C2-KjL">
-            <objects>
-                <viewController id="AXR-LW-o0d" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="29H-9O-WNu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="zZS-G3-oDo"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="0Oe-Y9-wAI"/>
-                    <connections>
-                        <segue destination="HUx-jd-GQ9" kind="showDetail" identifier="ShowDetails" id="htH-QR-ia7"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HpS-jC-5E0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1662" y="1791"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5UR-TF-yEa">
             <objects>
@@ -64,10 +45,10 @@
             </objects>
             <point key="canvasLocation" x="-268" y="926.98650674662679"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Owner Navigation-->
         <scene sceneID="Qin-cC-sE6">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bn9-GX-jKa" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Bn9-GX-jKa" userLabel="Owner Navigation" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="Dft-PI-Z9g"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LTQ-d8-FIj">
@@ -75,7 +56,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="AXR-LW-o0d" kind="relationship" relationship="rootViewController" id="bzK-QL-dhE"/>
+                        <segue destination="4Qs-Oa-YSv" kind="relationship" relationship="rootViewController" id="Zl4-ce-2hU"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7gO-gX-nbB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -129,8 +110,40 @@
             </objects>
             <point key="canvasLocation" x="-268" y="1791"/>
         </scene>
+        <!--Owner View Controller-->
+        <scene sceneID="rKJ-2L-vOj">
+            <objects>
+                <tableViewController id="4Qs-Oa-YSv" customClass="OwnerViewController" customModule="Greenel" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Ibc-v4-h9p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="YtC-qh-7B1">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YtC-qh-7B1" id="eF1-Aj-RJq">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4Qs-Oa-YSv" id="4EF-vh-QmD"/>
+                            <outlet property="delegate" destination="4Qs-Oa-YSv" id="ruT-tU-doN"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="Nkn-a5-9wr"/>
+                    <connections>
+                        <segue destination="HUx-jd-GQ9" kind="showDetail" identifier="ShowDetails" id="PpI-se-Jej"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHj-Au-K6D" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1662" y="1791"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="OUw-EN-DJo"/>
+        <segue reference="PpI-se-Jej"/>
     </inferredMetricsTieBreakers>
 </document>

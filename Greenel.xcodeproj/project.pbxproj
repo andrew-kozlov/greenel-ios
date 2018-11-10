@@ -12,6 +12,7 @@
 		71633302219646E500916E64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71633300219646E500916E64 /* LaunchScreen.storyboard */; };
 		7163330D21964FE300916E64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7163330C21964FE300916E64 /* Main.storyboard */; };
 		716333102196E6EC00916E64 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7163330F2196E6EC00916E64 /* AdminViewController.swift */; };
+		716333122196E8BB00916E64 /* OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716333112196E8BB00916E64 /* OwnerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		71633303219646E500916E64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7163330C21964FE300916E64 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7163330F2196E6EC00916E64 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		716333112196E8BB00916E64 /* OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				716332F7219646E300916E64 /* AppDelegate.swift */,
 				7163330C21964FE300916E64 /* Main.storyboard */,
 				7163330F2196E6EC00916E64 /* AdminViewController.swift */,
+				716333112196E8BB00916E64 /* OwnerViewController.swift */,
 				716333092196475400916E64 /* Resources */,
 			);
 			path = Greenel;
@@ -142,6 +145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				716333122196E8BB00916E64 /* OwnerViewController.swift in Sources */,
 				716333102196E6EC00916E64 /* AdminViewController.swift in Sources */,
 				716332F8219646E300916E64 /* AppDelegate.swift in Sources */,
 			);

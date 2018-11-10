@@ -8,9 +8,10 @@
 
 import UIKit
 
-class OwnerViewController: UITableViewController, UIPopoverPresentationControllerDelegate {
+class OwnerViewController: UITableViewController, UIPopoverPresentationControllerDelegate, WalletsViewControllerDelegate {
     
-    var owner: String = ""
+    var owner: String?
+    var wallet: String?
     var records: [Record] = []
     
     override func viewWillAppear(_ animated: Bool) {
@@ -33,16 +34,32 @@ class OwnerViewController: UITableViewController, UIPopoverPresentationControlle
         UserDefaults.standard.removeObserver(self, forKeyPath: "Owner")
     }
     
+    private func filter(records: [Record], byOwner owner: String) -> [Record] {
+        return records.filter {
+            $0.ownerName == owner
+                || $0.ownerAddress == owner
+                || $0.ownerOGRN == owner
+        }
+    }
+    
+    private func filter(records: [Record], byWallet wallet: String) -> [Record] {
+        return records.filter { $0.wallet == wallet }
+    }
+    
     @objc private func updateData() {
         owner = UserDefaults.standard.string(forKey: "Owner") ?? ""
         
-        let match = owner
+        var records = Service.shared.records
         
-        records = Service.shared.records.filter {
-            $0.ownerName == match
-                || $0.ownerAddress == match
-                || $0.ownerOGRN == match
+        if let owner = owner {
+            records = filter(records: records, byOwner: owner)
         }
+        
+        if let wallet = wallet {
+            records = filter(records: records, byWallet: wallet)
+        }
+        
+        self.records = records
         
         updateView()
     }
@@ -80,10 +97,28 @@ class OwnerViewController: UITableViewController, UIPopoverPresentationControlle
             segue.destination.modalPresentationStyle = .popover
             segue.destination.popoverPresentationController?.delegate = self
         }
+        
+        if let walletsViewController = segue.destination as? WalletsViewController {
+            var records = Service.shared.records
+            
+            if let owner = owner {
+                records = filter(records: records, byOwner: owner)
+            }
+            
+            walletsViewController.wallets = Array(Set(records.map({ $0.wallet })))
+            walletsViewController.selected = wallet
+            walletsViewController.delegate = self
+        }
     }
     
     func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return .none
+    }
+    
+    func walletsViewController(_: WalletsViewController, didSelectWallet wallet: String?) {
+        self.wallet = wallet
+        
+        updateData()
     }
     
 }

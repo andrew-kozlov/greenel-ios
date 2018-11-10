@@ -22,6 +22,7 @@
 		71633351219712DD00916E64 /* CodableAlamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 71633343219712D100916E64 /* CodableAlamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		716333AA219719AC00916E64 /* list.json in Resources */ = {isa = PBXBuildFile; fileRef = 7163339C219719AC00916E64 /* list.json */; };
 		716333AC21971CD600916E64 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 716333AB21971CD600916E64 /* Settings.bundle */; };
+		716333AE2197257800916E64 /* WalletsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716333AD2197257800916E64 /* WalletsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -170,6 +171,7 @@
 		71633337219712D000916E64 /* CodableAlamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = CodableAlamofire.xcodeproj; path = CodableAlamofire/CodableAlamofire.xcodeproj; sourceTree = "<group>"; };
 		7163339C219719AC00916E64 /* list.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = list.json; sourceTree = "<group>"; };
 		716333AB21971CD600916E64 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		716333AD2197257800916E64 /* WalletsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WalletsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -213,6 +215,7 @@
 				7163330F2196E6EC00916E64 /* AdminViewController.swift */,
 				716333112196E8BB00916E64 /* OwnerViewController.swift */,
 				716333132196E9A500916E64 /* RecordViewController.swift */,
+				716333AD2197257800916E64 /* WalletsViewController.swift */,
 				716333092196475400916E64 /* Resources */,
 				7163339B219719AC00916E64 /* MockData */,
 			);
@@ -458,6 +461,7 @@
 				716332F8219646E300916E64 /* AppDelegate.swift in Sources */,
 				716333142196E9A500916E64 /* RecordViewController.swift in Sources */,
 				716333182196F6F100916E64 /* Service.swift in Sources */,
+				716333AE2197257800916E64 /* WalletsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

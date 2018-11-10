@@ -42,6 +42,20 @@
         "wallet": "01234567890"
     },
     {
+        "id": "3",
+        "createdDate": "2008-09-15T15:53:00+05:00",
+        "ownerName": "Owner 1",
+        "ogrn": "OGRN 1",
+        "address": "Address 1",
+        "volume": 12.345,
+        "period": "Period 3",
+        "co2Volume": 0.123,
+        "sertNumber": "1234567890",
+        "lifeTime": 50,
+        "type": "A",
+        "wallet": "01234567890124"
+    },
+    {
         "id": "4",
         "createdDate": "2008-09-15T15:53:00+05:00",
         "ownerName": "Owner 1123412341",

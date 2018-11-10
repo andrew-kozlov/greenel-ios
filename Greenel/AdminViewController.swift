@@ -48,7 +48,7 @@ class AdminViewController: UITableViewController {
         let record = records[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "RecordCell", for: indexPath)
-        cell.textLabel?.text = "\(record.certificateNumber) (\(record.type))"
+        cell.textLabel?.text = record.certificateNumber
         cell.detailTextLabel?.text = record.ownerName
         
         return cell

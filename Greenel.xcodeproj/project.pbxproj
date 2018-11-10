@@ -15,6 +15,7 @@
 		716333122196E8BB00916E64 /* OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716333112196E8BB00916E64 /* OwnerViewController.swift */; };
 		716333142196E9A500916E64 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716333132196E9A500916E64 /* RecordViewController.swift */; };
 		716333162196EE4600916E64 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716333152196EE4600916E64 /* Record.swift */; };
+		716333182196F6F100916E64 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716333172196F6F100916E64 /* Service.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		716333112196E8BB00916E64 /* OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewController.swift; sourceTree = "<group>"; };
 		716333132196E9A500916E64 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
 		716333152196EE4600916E64 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		716333172196F6F100916E64 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 			children = (
 				716332F7219646E300916E64 /* AppDelegate.swift */,
 				716333152196EE4600916E64 /* Record.swift */,
+				716333172196F6F100916E64 /* Service.swift */,
 				7163330C21964FE300916E64 /* Main.storyboard */,
 				7163330F2196E6EC00916E64 /* AdminViewController.swift */,
 				716333112196E8BB00916E64 /* OwnerViewController.swift */,
@@ -156,6 +159,7 @@
 				716333162196EE4600916E64 /* Record.swift in Sources */,
 				716332F8219646E300916E64 /* AppDelegate.swift in Sources */,
 				716333142196E9A500916E64 /* RecordViewController.swift in Sources */,
+				716333182196F6F100916E64 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

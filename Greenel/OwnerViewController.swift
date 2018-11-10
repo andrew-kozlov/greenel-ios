@@ -39,9 +39,9 @@ class OwnerViewController: UITableViewController {
         let match = owner
         
         records = Service.shared.records.filter {
-            $0.ownerName.contains(match)
-                || $0.ownerAddress.contains(match)
-                || $0.ownerOGRN.contains(match)
+            $0.ownerName == match
+                || $0.ownerAddress == match
+                || $0.ownerOGRN == match
         }
         
         updateView()

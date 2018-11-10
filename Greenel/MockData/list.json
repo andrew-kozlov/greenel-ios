@@ -2,13 +2,13 @@
     {
         "id": "1",
         "createdDate": "2008-09-15T15:53:00+05:00",
-        "ownerName": "Owner 123456345634",
+        "ownerName": "Owner 1",
         "ogrn": "OGRN 1",
         "address": "Address 1",
         "volume": 123.45,
         "period": "Period 1",
         "co2Volume": 0.123,
-        "sertNumber": "1234567890",
+        "sertNumber": "12345678901234567890",
         "lifeTime": 5,
         "type": "A",
         "wallet": "01234567890"
